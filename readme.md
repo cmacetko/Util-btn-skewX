@@ -2,6 +2,8 @@
 
 Script que permite gerar o CSS necessário para criar um botão com os cantos em diagonal utilizando 
 
+[Clique Aqui para Abrir o Gerador de Botão](https://rawgit.com/cmacetko/Util-btn-skewX/master/index.html)
+
 # Compatibilidade
 
 * IE 10+
