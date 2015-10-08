@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Botão com Linha Diagonal no Canto</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<style>
+	.row > div
+	{
+		margin-bottom:20px;
+	}
+    </style>
+    
+    <style id="css_gerado"></style>
+    
+</head>
+<body>
+
+<div class="container">
+
+	<h1>Botão com Linha Diagonal no Canto</h1>
+    
+    <div class="row">
+    
+        <div class="col-md-12">
+            <h4>Mova para alterar a inclinação <span id="slider_value">(0 degrees)</span></h4>
+            <div id="slider"></div>
+        </div>
+        
+        <div class="col-md-12">
+            <h4>Botão Gerado</h4>
+            <div id="btn-gerado"><a href="#">Teste de Botão</a></div>
+        </div>
+        
+        <div class="col-md-12">
+            <h4>HTML Gerado</h4>
+            <textarea class="form-control" rows="2"><div id="btn-gerado"><a href="#">Teste de Botão</a></div></textarea>
+        </div>
+        
+        <div class="col-md-12">
+            <h4>CSS Gerado</h4>
+            <textarea class="form-control" id="css_gerado_text" rows="18"></textarea>
+        </div>
+        
+    </div>
+ 
+</div>
+
+<script>
+function GeraCss(Valor)
+{
+	
+	$("#slider_value").html("(" + Valor + " degrees)");
+	
+	ValorNeg	= Valor * (-1);
+	
+	TextCss		= 	['#btn-gerado',
+					'{',
+					'	-ms-transform: skewX(' + ValorNeg + 'deg);',
+					'	-webkit-transform: skewX(' + ValorNeg + 'deg);',
+					'	transform: skewX(' + ValorNeg + 'deg);',
+					'	background:#000;',
+					'	display:inline-block;',
+					'	padding:10px 100px;',
+					'}',
+					'#btn-gerado a',
+					'{',
+					'	-ms-transform: skewX(' + Valor + 'deg);',
+					'	-webkit-transform: skewX(' + Valor + 'deg);',
+					'	transform: skewX(' + Valor + 'deg);',
+					'	color:#FFF;',
+					'	font-size:13px;',
+					'	display:block;',
+					'}'],
+	
+	$("#css_gerado").html(TextCss.join(''));
+	$("#css_gerado_text").html(TextCss.join('\n'));
+	
+}
+$(function() {
+	
+	GeraCss(0);
+	
+	$("#slider").slider({
+	min: 		-75,
+	max: 		75,
+	step:		1,
+	value:		0,
+	slide: 		function(event, ui) {
+		
+		GeraCss(ui.value);
+		
+	}});
+	
+});
+</script>
+
+</body>
+</html>
