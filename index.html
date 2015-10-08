@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Util-btn-skewx by cmacetko</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Util-btn-skewx</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/cmacetko/Util-btn-skewX">View the Project on GitHub <small>cmacetko/Util-btn-skewX</small></a></p>
+        <ul>
+          <li><a href="https://github.com/cmacetko/Util-btn-skewX/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cmacetko/Util-btn-skewX/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cmacetko/Util-btn-skewX">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="botão-com-linha-diagonal-no-canto" class="anchor" href="#bot%C3%A3o-com-linha-diagonal-no-canto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Botão com Linha Diagonal no Canto</h1>
+
+<p>Script que permite gerar o CSS necessário para criar um botão com os cantos em diagonal utilizando </p>
+
+<h1>
+<a id="compatibilidade" class="anchor" href="#compatibilidade" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibilidade</h1>
+
+<ul>
+<li>IE 10+</li>
+<li>Google Chrome 36+</li>
+<li>Firefox 16+</li>
+<li>Safari 3.2+</li>
+<li>Opera 23+</li>
+</ul>
+
+<h1>
+<a id="cross-browser" class="anchor" href="#cross-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cross-Browser</h1>
+
+<p>É necessário repetir o comando para cada versão:</p>
+
+<p><strong>Exemplo:</strong></p>
+
+<pre><code>-ms-transform: skewX(100deg); /* IE 9 */
+-webkit-transform: skewX(100deg); /* Safari */
+transform: skewX(100deg);
+</code></pre>
+
+<h1>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note</h1>
+
+<p>Para evitar que o texto do botão acompanhe o angulo definido, é necessário definir um valor negativo acima do botão.</p>
+
+<p><strong>Exemplo de CSS:</strong></p>
+
+<pre><code>#btn-gerado
+{
+    -ms-transform: skewX(-50deg);
+    -webkit-transform: skewX(-50deg);
+    transform: skewX(-50deg);
+    background:#000;
+    display:inline-block;
+    padding:10px 100px;
+}
+#btn-gerado a
+{
+    -ms-transform: skewX(50deg);
+    -webkit-transform: skewX(50deg);
+    transform: skewX(50deg);
+    color:#FFF;
+    font-size:13px;
+    display:block;
+}
+</code></pre>
+
+<p><strong>Botão:</strong></p>
+
+<pre><code>&lt;div id="btn-gerado"&gt;&lt;a href="#"&gt;Teste de Botão&lt;/a&gt;&lt;/div&gt;
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/cmacetko">cmacetko</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
